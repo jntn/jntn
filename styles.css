@@ -1,0 +1,166 @@
+:root {
+  --main-bg-color: palevioletred;
+  --animation-delay: 0.8s;
+
+  --main-fade-duration: 1.5s;
+
+  --opacity-o-duration: 1s;
+  --delay-o-duration: 1.4s;
+
+  --opacity-a-duration: 0.7s;
+  --delay-a-duration: 1s;
+
+  --opacity-a2-duration: 0.8s;
+  --delay-a2-duration: 1.3s;
+
+  --opacity-timing: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  --move-duration: 0.8s;
+  --move-timing: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+  color: white;
+}
+
+main {
+  margin-top: -120px;
+  font-weight: 800;
+  font-size: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+
+  animation: mainFadeIn var(--main-fade-duration);
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 600px) {
+  .animation-container {
+    transform: scale(0.5);
+  }
+}
+
+.animation-container {
+  position: relative;
+  width: 480px;
+}
+
+.animation-container span {
+  position: absolute;
+}
+
+.animation-container .j {
+  left: 30px;
+  transform: translateX(100px);
+  animation: moveJ var(--move-duration) var(--move-timing)
+    var(--animation-delay);
+  animation-fill-mode: forwards;
+}
+
+.animation-container .o {
+  left: 60px;
+  opacity: 0;
+  animation: fadeIn var(--opacity-o-duration) var(--opacity-timing)
+    var(--delay-o-duration);
+  animation-fill-mode: forwards;
+}
+
+.animation-container .n {
+  left: 137px;
+  transform: translateX(23px);
+  animation: moveN var(--move-duration) var(--move-timing)
+    var(--animation-delay);
+  animation-fill-mode: forwards;
+}
+.animation-container .a {
+  left: 213px;
+  opacity: 0;
+  animation: fadeIn var(--opacity-a-duration) var(--opacity-timing)
+    var(--delay-a-duration);
+  animation-fill-mode: forwards;
+}
+.animation-container .t {
+  left: 275px;
+  transform: translateX(-43px);
+  animation: moveT var(--move-duration) var(--move-timing)
+    var(--animation-delay);
+  animation-fill-mode: forwards;
+}
+.animation-container .a2 {
+  left: 330px;
+  opacity: 0;
+  animation: fadeIn var(--opacity-a2-duration) var(--opacity-timing)
+    var(--delay-a2-duration);
+  animation-fill-mode: forwards;
+}
+.animation-container .n2 {
+  left: 395px;
+  transform: translateX(-108px);
+  animation: moveN2 var(--move-duration) var(--move-timing)
+    var(--animation-delay);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes moveJ {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveN {
+  from {
+    transform: translateX(23px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveT {
+  from {
+    transform: translateX(-43px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveN2 {
+  from {
+    transform: translateX(-108px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes mainFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
