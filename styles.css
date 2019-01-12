@@ -22,14 +22,30 @@ html {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: var(--main-bg-color);
   font-family: "Open Sans", sans-serif;
   height: 100%;
   color: white;
+  margin: 0;
 }
 
-main {
+header {
+  background-color: #CF6A8B;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.links {
+  text-align: center;
+}
+
+.jntn {
   margin-top: -120px;
   font-weight: 800;
   font-size: 100px;
@@ -39,6 +55,7 @@ main {
   justify-content: center;
   align-items: center;
   opacity: 0;
+  pointer-events: none;
 
   animation: mainFadeIn var(--main-fade-duration);
   animation-fill-mode: forwards;
