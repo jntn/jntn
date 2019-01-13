@@ -1,6 +1,5 @@
 {
+  "version": 2,
   "name": "jntn",
-  "now": {
-    "alias": "jntn.se"
-  }
+  "alias": "jntn.se"
 }

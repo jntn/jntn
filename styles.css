@@ -22,8 +22,13 @@ html {
   height: 100%;
 }
 
-a {
+a, a:visited {
   text-decoration: none;
+  color: #4F4045;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 body {
