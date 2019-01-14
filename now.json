@@ -1,5 +1,15 @@
 {
   "version": 2,
   "name": "jntn",
-  "alias": "jntn.se"
+  "alias": "jntn.se",
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@now/html-minifier"
+    },
+    {
+      "src": "*.css",
+      "use": "@now/html-minifier"
+    }
+  ]
 }
